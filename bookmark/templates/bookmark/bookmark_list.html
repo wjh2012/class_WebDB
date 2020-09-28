@@ -1,26 +1,16 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %}
 
-<head>
-    <title>Django Bookmark List</title>
-</head>
+{% block title %}bookmark_list.html{% endblock %}
 
-<body>
-    <div id="content">
-        <h1>Bookmark List</h1>
-        <ul>
-            {% for bookmark in object_list %}
-            <li><a href="{% url 'detail' bookmark.id %}">{{ bookmark }}</a></li>
-            {% endfor %}
-        </ul>
-    </div>
-</body>
+{% block content %}
 
-</html>
-<!--
-    {{ somnthing }} 는 변수를 의미
+    <h1>Bookmark List</h1>
+    <br>
     
-
-
-
--->
+    <ul>
+        {% for bookmark in object_list %}
+        <li><a href="{% url 'bookmark:detail' bookmark.id %}">{{ bookmark }}</a></li>
+    {% endfor %}
+    </ul>
+    
+{% endblock %}

@@ -1,8 +1,8 @@
-from django.urls import path
-from bookmark.views import BookmarkLV, BookmarkDV
+from django.urls import path, re_path
+from bookmark import views
 
 app_name = 'bookmark'
 urlpatterns = [
-    path('', BookmarkLV.as_view(), name='index'),
-    path('<int:pk>/', BookmarkDV.as_view(), name='detail'),
+    path('', views.BookmarkLV.as_view(), name='index'),
+    path('<int:pk>/', views.BookmarkDV.as_view(), name='detail'),
 ]
