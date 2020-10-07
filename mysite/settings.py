@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'bookmark.apps.BookmarkConfig',
     'blog.apps.BlogConfig',
     'namecard.apps.NamecardConfig',
+    'student.apps.StudentConfig',
 ]
 
 MIDDLEWARE = [
