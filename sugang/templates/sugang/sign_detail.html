@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}subject_list.html{% endblock %}
+
+{% block content %}
+    <h2 class="mt-5">{{ object.name }}</h2>   
+
+    <ul class="col-md-3 mt-3">
+        <a href="{% url 'sugang:subject_detail' object.subject.id %}"> {{ object.subject.subj }}</a>            
+    </ul>
+{% endblock %}

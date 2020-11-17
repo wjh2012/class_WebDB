@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}subject_detail.html{% endblock %}
+
+{% block content %}
+
+    <div class="mt-5">
+        <span class="h2">{{ object.subj }}&emsp;</span>
+        <span class="h2">{{ object.prof }}&emsp;</span>
+    </div>
+
+    <div class="row">
+        {% for sign in object.sign_set.all %}
+        <div class="col-md-3 mb-5">
+            <a href="{{ sign.get_absolute_url }}">
+                {{ sign.name }}
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
